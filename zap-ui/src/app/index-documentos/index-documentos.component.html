@@ -1,0 +1,45 @@
+<div class="container">
+  <h1 class="main-title">Lista de Documentos</h1>
+  <ul>
+    <li *ngFor="let documentoItem of documentos" class="main-li">
+      <div class="info">
+        <p>{{ documentoItem.name }}</p>
+        <b>
+          <span>{{ documentoItem.id }}</span>
+          <strong>Token: </strong> {{ documentoItem.token }}</b
+        >
+        <b>
+          <ng-container *ngFor="let signerItem of signers">
+            <ng-container *ngIf="signerItem.documentID === documentoItem.id">
+              <div>
+                <strong>
+                  <i class="fi fi-br-user"></i>
+                  {{ signerItem.name }}
+                </strong>
+                <strong>
+                  <i class="fi fi-br-at"></i>
+                  {{ signerItem.email }}
+                </strong>
+              </div>
+            </ng-container>
+          </ng-container>
+        </b>
+      </div>
+      <div class="function">
+        <a href="/detalhes/{{ documentoItem.id }}">
+          <i class="fi fi-br-file"></i>
+        </a>
+        <a href="{{ documentoItem.original_file }}" target="_blank">
+          <i class="fi fi-br-link"></i>
+        </a>
+        <button (click)="deleteDoc(documentoItem.id)">
+          <i class="fi fi-br-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+  <a class="primary-link" href="/novo">
+    <i class="fi fi-br-add"></i>
+    Criar documento
+  </a>
+</div>

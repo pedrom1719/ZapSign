@@ -1,0 +1,46 @@
+<header>
+  <i class="main-icon fi fi-br-file"></i>
+  <div>
+    <h1>{{ documentos[0].name }}</h1>
+    <footer>
+      <a href="{{ documentos[0].original_file }}" target="_blank">
+        <i class="fi fi-br-link"></i>
+      </a>
+      <a href="/alterar-doc/{{ documentos[0].id }}">
+        <i class="fi fi-br-pencil"></i>
+      </a>
+    </footer>
+  </div>
+</header>
+
+<div class="info-container">
+  <h5>Token: {{ documentos[0].token }}</h5>
+
+  <div class="status">
+    <i class="fi fi-br-clock"></i>
+    <h2><span>STATUS: </span>{{ documentos[0].status }}</h2>
+  </div>
+
+  <div class="signers">
+    <h2>SIGNATÁRIOS</h2>
+    <ul>
+      <li>
+        <i class="user-icon fi fi-br-user"></i>
+        <div>
+          <strong>{{ signers[0].name }}</strong>
+          <span>{{ signers[0].email }}</span>
+        </div>
+        <footer>
+          <!-- <a href="#">
+            <i class="fi fi-br-pencil"></i>
+          </a> -->
+          <h6>{{ signers[0].status }}</h6>
+        </footer>
+      </li>
+    </ul>
+  </div>
+
+  <h4>Criado em: {{ documentos[0].created_at }}</h4>
+</div>
+
+<a href="/" class="button-ghost">Voltar</a>

@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://sandbox.api.zapsign.com.br",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

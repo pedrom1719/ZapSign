@@ -1,0 +1,24 @@
+<header>
+  <i class="main-icon fi fi-br-pencil"></i>
+  <input type="text" value="{{ documentos[0].name }}" #docName />
+</header>
+
+<div class="info-container">
+  <h5>Token: {{ documentos[0].token }}</h5>
+
+  <div class="status">
+    <i class="fi fi-br-clock"></i>
+    <h2><span>STATUS: </span>{{ statusDoc }}</h2>
+    <button (click)="changeStatus(documentos[0].status)">Alterar Status</button>
+  </div>
+</div>
+
+<div class="buttons-container">
+  <a href="/" class="button-ghost">Voltar</a>
+  <button
+    class="primary-link"
+    (click)="updateDoc(documentos[0].id, docName.value, statusDoc)"
+  >
+    Aplicar
+  </button>
+</div>

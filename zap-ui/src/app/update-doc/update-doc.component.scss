@@ -1,0 +1,92 @@
+@import "../detalhes/detalhes.component.scss";
+header {
+  input {
+    background-color: #3884ff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600;
+
+    width: 100%;
+    padding: 10px 12px 10px 18px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.info-container {
+  .status {
+    button {
+      border-radius: 8px;
+      border: solid 2px #e4e4e4;
+
+      font-size: 10px;
+      color: #777;
+
+      padding: 3px 5px;
+
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #e4e4e4;
+        color: #333;
+      }
+    }
+  }
+
+  input[type="text"] {
+    border: none;
+    border-radius: 10px;
+    border-right: solid 10px transparent;
+    background-color: #fff;
+    outline: none;
+
+    width: 100%;
+    padding: 16px;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      border-right: solid 10px #3884ff1f;
+    }
+
+    &:focus {
+      border-right: solid 10px #3884ff;
+    }
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+
+  margin: 8px 0 0 0;
+
+  a {
+    width: 50%;
+    margin: 0;
+  }
+
+  button {
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    height: 42px;
+    width: 50%;
+    padding: 12px;
+  }
+}

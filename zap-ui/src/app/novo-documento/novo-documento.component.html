@@ -1,0 +1,33 @@
+<header>
+  <i class="fi fi-br-file"></i>
+  <div>
+    <h1>Novo Documento</h1>
+  </div>
+</header>
+<form
+  (submit)="
+    formSubmit(
+      docTitle.value,
+      docUrl.value,
+      signerName.value,
+      signerEmail.value
+    )
+  "
+>
+  <h5>
+    <i class="fi fi-br-file"></i>
+    Documento
+  </h5>
+  <input type="text" placeholder="Titulo do Documento" #docTitle />
+  <input type="text" placeholder="URL do Documento" #docUrl />
+  <h5>
+    <i class="fi fi-br-user"></i>
+    Signatario
+  </h5>
+  <input type="text" placeholder="Nome do Signatario" #signerName />
+  <input type="email" placeholder="Email do Signatario" #signerEmail />
+  <div class="buttons-container">
+    <a href="/" class="button-ghost">Cancelar</a>
+    <input type="submit" class="button-primary" value="Enviar" />
+  </div>
+</form>
